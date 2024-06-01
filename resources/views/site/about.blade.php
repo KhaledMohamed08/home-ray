@@ -54,7 +54,7 @@
                         <p>Expedita iusto sunt beatae esse id nihil voluptates magni, excepturi distinctio impedit illo, incidunt iure facilis atque, inventore reprehenderit quidem aliquid recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quod ad sequi atque accusamus deleniti placeat dignissimos illum nulla voluptatibus vel optio, molestiae dolore velit iste maxime, nobis odio molestias!</p>
                     </div>
                 </div>
-                <div class="col-lg-10 mt-5">
+                <!-- <div class="col-lg-10 mt-5">
                     <h1 class="text-center mb-5 wow fadeInUp">Our Doctors</h1>
                     <div class="row justify-content-center">
                         <div class="col-md-6 col-lg-4 wow zoomIn">
@@ -104,7 +104,7 @@
                         </div>
 
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

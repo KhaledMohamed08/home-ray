@@ -15,6 +15,15 @@ class ServiceSeeder extends Seeder
     public function run(): void
     {
         for ($i = 0; $i < 5; $i++) {
+            $category = Category::where('name', 'nursing')->first();
+            Service::create([
+                'name' => $category->name  . ' ' . $i + 1,
+                'price' => rand(100, 999),
+                'category_id' => $category->id,
+            ]);
+        }
+        
+        for ($i = 0; $i < 5; $i++) {
             $category = Category::where('name', 'radiology')->first();
             Service::create([
                 'name' => $category->name . ' ' . $i + 1,

@@ -14,15 +14,15 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         Category::create([
+            'name' => 'nursing'
+        ]);
+        
+        Category::create([
             'name' => 'radiology'
         ]);
 
         Category::create([
             'name' => 'analysis'
-        ]);
-
-        Category::create([
-            'name' => 'consulting'
         ]);
     }
 }

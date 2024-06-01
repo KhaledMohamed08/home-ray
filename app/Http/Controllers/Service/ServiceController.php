@@ -15,7 +15,14 @@ class ServiceController extends Controller
     {
         $services = Service::all();
 
-        return view('site.services.index', compact('services'));
+        return response()->json($services, 200);
+    }
+
+    public function indexApi()
+    {
+        $services = Service::all();
+
+        return response()->json($services, 200);
     }
 
     /**

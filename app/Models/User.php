@@ -73,4 +73,51 @@ class User extends Authenticatable
     {
         return $query->where('role', 'doctor');
     }
+
+    public function reservations ()
+    {
+        return $this->hasMany(Reservation::class);
+    }
+
+    public function nursingServices()
+    {
+        $nursingServices = [];
+        foreach ($this->reservations as $reservation) {
+            foreach ($reservation->services as $service) {
+                if ($service->category->name === 'nursing') {
+                    array_push($nursingServices, $service);
+                }
+            }
+        }
+
+        return $nursingServices;
+    }
+
+    public function radiologyServices()
+    {
+        $nursingServices = [];
+        foreach ($this->reservations as $reservation) {
+            foreach ($reservation->services as $service) {
+                if ($service->category->name === 'radiology') {
+                    array_push($nursingServices, $service);
+                }
+            }
+        }
+
+        return $nursingServices;
+    }
+
+    public function analysisServices()
+    {
+        $nursingServices = [];
+        foreach ($this->reservations as $reservation) {
+            foreach ($reservation->services as $service) {
+                if ($service->category->name === 'analysis') {
+                    array_push($nursingServices, $service);
+                }
+            }
+        }
+
+        return $nursingServices;
+    }
 }

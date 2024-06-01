@@ -13,7 +13,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::with('services')->get();
+
+        return view('site.services.index', compact('categories'));
     }
 
     /**

@@ -14,4 +14,16 @@ class Service extends Model
         'price',
         'category_id',
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
+
+    public function reservations()
+    {
+        return $this->belongsToMany(Reservation::class, 'reservation_service', 'reservation_id')
+                    ->withPivot('name', 'address', 'age', 'gender', 'note')
+                    ->withTimestamps();
+    }
 }
